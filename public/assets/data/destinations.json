@@ -1,0 +1,7 @@
+[
+  { "id": "1", "name": "Cairo", "img": "/assets/img/cairo.jpeg" },
+  { "id": "2", "name": "Tanta", "img": "/assets/img/tanta.jpeg" },
+  { "id": "3", "name": "Alexandria", "img": "/assets/img/alex.jpeg" },
+  { "id": "4", "name": "Shokna", "img": "/assets/img/shokna.jpg" },
+  { "id": "5", "name": "Hurghada", "img": "/assets/img/hurghada.jpg" }
+]
