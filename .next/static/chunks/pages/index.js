@@ -790,7 +790,7 @@ eval("var camel2hyphen = function (str) {\n  return str\n          .replace(/[A-
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('[{"id":"1","name":"Cairo","img":"/assets/img/cairo.jpeg","tours":[1,3]},{"id":"2","name":"Tanta","img":"/assets/img/tanta.jpeg","tours":[2,4]},{"id":"3","name":"Alexandria","img":"/assets/img/alex.jpeg","tours":[7,5]},{"id":"4","name":"Shokna","img":"/assets/img/shokna.jpg","tours":[6,8]},{"id":"5","name":"Hurghada","img":"/assets/img/hurghada.jpg","tours":[9,10]}]');
+module.exports = JSON.parse('[{"id":"1","name":"Cairo","img":"/assets/img/cairo.jpeg","tours":[1,3]},{"id":"2","name":"Tanta","img":"/assets/img/tanta.jpeg","tours":[2,4]},{"id":"3","name":"Alexandria","img":"/assets/img/alex.jpeg","tours":[7,5]},{"id":"4","name":"Shokna","img":"/assets/img/shokna.jpg","tours":[6,8]},{"id":"5","name":"Hurghada","img":"/assets/img/hurghada.jpg","tours":[9,10]},{"id":"6","name":"Sharm Elsheikh","img":"/assets/img/shokna.jpg","tours":[9,10]}]');
 
 /***/ }),
 
