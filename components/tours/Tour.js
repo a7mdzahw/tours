@@ -16,7 +16,7 @@ const Tour = ({ tour }) => {
           <div className="card-body">
             <div className="card-content">
               <h2 className="text-2xl text-indigo-700">{tour.name}</h2>
-              <Rating />
+              <Rating rating={tour.rating} />
               <p className="mt-2">
                 <span className="text-gray-500">from</span> {tour.price}LE
               </p>

@@ -1,22 +1,12 @@
-const Rating = () => {
+import ReactRating from "react-rating";
+
+const Rating = ({ rating }) => {
   return (
-    <div className="text-yellow-400">
-      <span>
-        <i className="bi bi-star-fill"></i>
-      </span>
-      <span>
-        <i className="bi bi-star-fill"></i>
-      </span>
-      <span>
-        <i className="bi bi-star-fill"></i>
-      </span>
-      <span>
-        <i className="bi bi-star-half"></i>
-      </span>
-      <span>
-        <i className="bi bi-star"></i>
-      </span>
-    </div>
+    <ReactRating
+      initialRating={rating}
+      emptySymbol={<i className="bi bi-star text-yellow-400"></i>}
+      fullSymbol={<i className="bi bi-star-fill text-yellow-400"></i>}
+    />
   );
 };
 

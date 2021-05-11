@@ -11,7 +11,7 @@ const TourDescription = ({ tour }) => {
       <div className="container">
         <h2 className="text-2xl font-bold">{tour.name}</h2>
         <div className="flex space-x-2">
-          <Rating />
+          <Rating rating={tour.rating} />
           <span className="text-green-700">1200 reviews</span>
         </div>
         {tour.place}
