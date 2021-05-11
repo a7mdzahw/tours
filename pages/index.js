@@ -39,11 +39,13 @@ const Home = () => {
 
       <section className="container py-4 tours">
         <h2 className="text-indigo-700 text-xl mb-3">Top Tours</h2>
-        <Slider>
-          {tours.map((tour) => {
-            return <Tour key={tour.id} tour={tour} />;
-          })}
-        </Slider>
+        <div style={{ width: "97%" }}>
+          <Slider>
+            {tours.map((tour) => {
+              return <Tour key={tour.id} tour={tour} />;
+            })}
+          </Slider>
+        </div>
       </section>
     </div>
   );

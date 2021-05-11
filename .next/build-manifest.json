@@ -29,10 +29,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/destination/[name]": [
+    "/tour/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/destination/[name].js"
+      "static/chunks/pages/tour/[id].js"
     ]
   },
   "ampFirstPages": []
