@@ -1,6 +1,6 @@
 const SearchForm = () => {
   return (
-    <form className="form absolute shadow top-20 left-20 bg-gray-100 p-10 bg-opacity-50 md:w-96">
+    <form className="search-form absolute shadow bg-gray-100 p-10 bg-opacity-50 md:w-96">
       <h2 className="text-xl font-bold text-indigo-600 mb-2">Find amazing things to do.</h2>
       <input
         type="text"

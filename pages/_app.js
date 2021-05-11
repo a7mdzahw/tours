@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/shared/Navbar";
+import Footer from "../components/shared/Footer";
 
 import "../styles/global.css";
 
@@ -32,7 +33,7 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <Navbar />
       <Component {...pageProps} />
-
+      <Footer />
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Footer from "../components/shared/Footer";
+
 import SearchForm from "../components/shared/SearchForm";
 import Slider from "../components/shared/Slider";
 import Destination from "../components/tours/Destination";
@@ -17,8 +17,8 @@ const Home = () => {
       <img
         src="/assets/img/hero.jpeg"
         alt="hero pic"
-        className="w-100"
-        style={{ objectFit: "cover", maxHeight: "93vh" }}
+        className="w-100 md:h-96 "
+        style={{ objectFit: "cover", maxHeight: "93vh", backgroundPosition: "top" }}
       />
       <div className="container">
         <SearchForm />
@@ -45,7 +45,6 @@ const Home = () => {
           })}
         </Slider>
       </section>
-      <Footer />
     </div>
   );
 };

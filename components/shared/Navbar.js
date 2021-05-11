@@ -15,7 +15,7 @@ const Navbar = () => {
           </Link>
         </div>
         <button
-          className="navbar-toggler border-0 focus:outline-none"
+          className="md:hidden"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -23,20 +23,38 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="bi bi-list text-3xl"></span>
+          <i className="bi bi-list text-3xl text-indigo-700"></i>
         </button>
         <div className="collapse navbar-collapse pl-3 md:p-0" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link href="/destinations">
-                <a className="nav-link">Destinations</a>
-              </Link>
-            </li>
             <li className="nav-item">
               <Link href="/tours">
                 <a className="nav-link">Tours</a>
               </Link>
             </li>
+            <div className="dropdown nav-item">
+              <button
+                className="py-2 dropdown-toggle nav-link"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i className="bi bi-person"></i> Account
+              </button>
+              <ul className="dropdown-menu  md:text-center " aria-labelledby="dropdownMenuButton1">
+                <li className="nav-item">
+                  <Link href="/login">
+                    <a className="dropdown-item">Log in</a>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link href="/signup">
+                    <a className="dropdown-item">Sign up</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>

@@ -2,6 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/destination/[name]": "pages/destination/[name].js",
+  "/tours": "pages/tours.js",
   "/": "pages/index.js",
-  "/tour/[id]": "pages/tour/[id].js"
+  "/tour/[id]": "pages/tour/[id].js",
+  "/login": "pages/login.js",
+  "/signup": "pages/signup.js"
 }

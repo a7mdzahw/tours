@@ -1,10 +1,13 @@
+import { useState } from "react";
 import Accordion from "../../components/shared/Accordion";
 import Rating from "../../components/shared/Rating";
 import tours from "../../public/assets/data/tours.json";
 
 const TourDescription = ({ tour }) => {
+  const [tab, setTab] = useState("Included");
+
   return (
-    <div className="space-y-10 mt-3 description">
+    <div className="space-y-10 mt-3  max-w-4xl mx-auto" style={{ minHeight: "62vh" }}>
       <div className="container">
         <h2 className="text-2xl font-bold">{tour.name}</h2>
         <div className="flex space-x-2">
@@ -15,7 +18,7 @@ const TourDescription = ({ tour }) => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 ">
+          <div className="col-lg-6 pe-4">
             <img src={tour.img} alt={tour.name} className="h-64 w-100" style={{ objectFit: "cover" }} />
           </div>
           <div className="card-body col-md-6">
@@ -39,25 +42,62 @@ const TourDescription = ({ tour }) => {
           rem sit expedita repellendus commodi.
         </p>
       </div>
-      <div className="container">
+      <div className="container md:hidden">
         <Accordion name="What's Included" id="included">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo totam rem tenetur sint neque. Sit possimus
-          voluptate eaque, amet quasi temporibus autem ex dignissimos quam fugit nobis! Sapiente, rerum ad.
+          <Content tab="Included" />
         </Accordion>
-        <Accordion name="Itenary" id="itenary">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo totam rem tenetur sint neque. Sit possimus
-          voluptate eaque, amet quasi temporibus autem ex dignissimos quam fugit nobis! Sapiente, rerum ad.
+        <Accordion name="Itineray" id="itineray">
+          <Content tab="Itineray" />
         </Accordion>
         <Accordion name="Depature & Return" id="leave">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo totam rem tenetur sint neque. Sit possimus
-          voluptate eaque, amet quasi temporibus autem ex dignissimos quam fugit nobis! Sapiente, rerum ad.
+          <Content tab="Depature" />
         </Accordion>
+      </div>
+      <div className="hidden container md:block">
+        <ul className="nav nav-tabs">
+          <Tab name="Included" onClick={setTab} current={tab} />
+          <Tab name="Itineray" onClick={setTab} current={tab} />
+          <Tab name="Depature" onClick={setTab} current={tab} />
+        </ul>
+        <div className="text-sm text-gray-500 mt-2">
+          <Content tab={tab} />
+        </div>
       </div>
       <div className="bg-white p-3 shadow-md fixed md:hidden bottom-0 inset-x-0">
         <button className="w-100 px-4 py-3 bg-purple-700 text-white rounded ">Check Availability</button>
       </div>
     </div>
   );
+};
+
+const Tab = ({ name, onClick, current }) => (
+  <li className="nav-item">
+    <button className={`nav-link ${current === name && "active"}`} aria-current="page" onClick={() => onClick(name)}>
+      {name}
+    </button>
+  </li>
+);
+
+const Content = ({ tab }) => {
+  switch (tab) {
+    case "Included":
+      return (
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+      );
+    case "Itineray":
+      return (
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quasi tempore quos atque minima nobis possimus
+          nostrum expedita aspernatur illo?
+        </p>
+      );
+    case "Depature":
+      return <p>SAT 31 ON 15 : 25 : 69</p>;
+  }
 };
 
 export const getServerSideProps = async ({ query }) => {

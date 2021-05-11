@@ -11,3 +11,8 @@ body {
 .description {
   margin-bottom: 5rem;
 }
+
+.search-form {
+  top: 2%;
+  left: 5%;
+}
