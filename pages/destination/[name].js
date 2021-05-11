@@ -20,12 +20,12 @@ const DestinationCatalog = ({ destination, destinationTours }) => {
           {destinationTours.map((tour) => (
             <div className="col-md-4 px-2 mb-3 relative" key={tour.id}>
               <div className="card rounded-lg">
-                <div className="card-body flex space-x-6">
-                  <img src={tour.img} alt={tour.name} className="h-48 w-64 rounded-lg object-cover" />
-                  <div>
-                    <h2>{tour.name}</h2>
+                <div className="card-body flex flex-col md:flex-row">
+                  <img src={tour.img} alt={tour.name} className="h-48 w-64 rounded-lg object-cover me-4" />
+                  <div className="space-y-2 mt-2 mx-0 md:mx-6">
+                    <h2 className="text-indigo-600 font-thin text-xl">{tour.name}</h2>
                     <Rating rating={tour.rating} />
-                    <p>{tour.price}</p>
+                    <p>from {tour.price}</p>
                   </div>
                   <Link href={`/tour/${tour.id}`}>
                     <a className="text-indigo-600 absolute bottom-4 right-4 text-sm">read more...</a>
